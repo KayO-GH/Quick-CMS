@@ -10,7 +10,7 @@ $articles = $article->fetch_all();
 <html>
 
 <head>
-	<title>CMS Tutorial</title>
+	<title>CMS Template</title>
 	<link rel="stylesheet" href="assets/style.css" />
 </head>
 

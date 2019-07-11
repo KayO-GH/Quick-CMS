@@ -25,7 +25,7 @@ if (isset($_SESSION['logged_in']) and $_SESSION['logged_in']) {
     <html>
 
     <head>
-        <title>CMS Tutorial</title>
+        <title>CMS Template</title>
         <link rel="stylesheet" href="../assets/style.css" />
     </head>
 
