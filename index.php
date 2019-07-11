@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('includes/connection.php');
 include_once('includes/article.php');
 
@@ -20,11 +21,11 @@ $articles = $article->fetch_all();
 			<?php foreach ($articles as $article) { ?>
 				<li>
 					<a href="article.php?id=<?php echo $article['article_id']; ?>">
-						<?php echo $article['article_title'];?>
+						<?php echo $article['article_title']; ?>
 					</a>
 					- <small>
 						<!-- Use PHP date formatting -->
-						posted: <?php echo date('l jS', $article['article_timestamp']);?>
+						posted: <?php echo date('l jS', $article['article_timestamp']); ?>
 					</small>
 				</li>
 			<?php } ?>
@@ -32,7 +33,13 @@ $articles = $article->fetch_all();
 
 		<br>
 
-		<small><a href="admin">admin</a></small>
+		<small>
+			<?php if (isset($_SESSION['logged_in']) and $_SESSION['logged_in'] == true) { ?>
+				<a href="logout.php">Log out</a> | <a href="add.php">Add Article</a>
+			<?php } else { ?>
+				<a href="admin">admin</a>
+			<?php } ?>
+		</small>
 	</div>
 </body>
 

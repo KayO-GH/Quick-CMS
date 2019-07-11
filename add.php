@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('../includes/connection.php');
+include_once('includes/connection.php');
 
 if (isset($_SESSION['logged_in']) and $_SESSION['logged_in'] == true) {
     /* 
@@ -32,7 +32,7 @@ if (isset($_SESSION['logged_in']) and $_SESSION['logged_in'] == true) {
 
     <head>
         <title>CMS Tutorial</title>
-        <link rel="stylesheet" href="../assets/style.css" />
+        <link rel="stylesheet" href="assets/style.css" />
     </head>
 
     <body>

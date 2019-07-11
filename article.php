@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('includes/connection.php');
 include_once('includes/article.php');
 
@@ -27,7 +28,21 @@ if (isset($_GET['id'])) {
             <p>
                 <?php echo $data['article_content']; ?>
             </p>
+
+            <?php if (isset($_SESSION['logged_in']) and $_SESSION['logged_in'] == true) { ?>
+                <a href="admin/delete.php?id=<?php echo $data['article_id']; ?>">
+                    &times; Delete
+                </a> 
+                <a href="edit.php?id=<?php echo $data['article_id']; ?>">
+                     Edit
+                </a>
+                <br /><br />
+            <?php } ?>
+
+            
             <a href="index.php">&larr; Back</a>
+
+
         </div>
     </body>
 

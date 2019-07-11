@@ -17,7 +17,7 @@ if (isset($_SESSION['logged_in']) and $_SESSION['logged_in']) {
         $query->bindValue(1, $id);
         $query->execute();
 
-        header('Location: delete.php');
+        header('Location: ../index.php');
     }
     $articles = $article->fetch_all();
 

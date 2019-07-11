@@ -15,15 +15,15 @@ if (isset($_SESSION['logged_in'])) {
 
     <body>
         <div class="container">
-            <a href="index.php" id="logo">CMS</a>
+            <a href="../index.php" id="logo">CMS</a>
             
             <br />
 
             <ol>
+                <li><a href="../index.php">View Articles</a></li>
                 <li><a href="add.php">Add Article</a></li>
                 <li><a href="delete.php">Delete Article</a></li>
-                <!-- <li><a href="edit.php">Edit Article</a></li> -->
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="../logout.php">Logout</a></li>
             </ol>
         </div>
     </body>
@@ -71,7 +71,7 @@ if (isset($_SESSION['logged_in'])) {
 
     <body>
         <div class="container">
-            <a href="index.php" id="logo">CMS</a>
+            <a href="../index.php" id="logo">CMS</a>
             <br /><br />
             <?php
             if (isset($error)) {
